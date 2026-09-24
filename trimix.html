@@ -36,8 +36,6 @@
         <div class="hero-media">
           <div class="hero-glow"></div>
           <img src="assets/trimix/img/trimix-injection.png" alt="Vial of Trimix Injection by Balanced Life Care" width="1086" height="1448" fetchpriority="high">
-          <span class="badge badge-a">Provider reviewed</span>
-          <span class="badge badge-b">Discreet shipping</span>
         </div>
       </div>
     </section>
@@ -52,7 +50,7 @@
       </div>
     </section>
 
-    <section class="section alt">
+    <section class="section alt" id="treatment">
       <div class="container about" id="about">
         <div>
           <p class="eyebrow">About the treatment</p>
@@ -64,36 +62,14 @@
             <div class="feature"><span class="icon">&#128274;</span><h3>Private</h3><p>Plain, discreet packaging delivered to your door.</p></div>
           </div>
         </div>
-        <form id="trimix-form" class="card form" novalidate>
-          <h2 id="start">Start your request</h2>
-          <p class="muted">Answer a few quick questions, then continue to add Trimix to your cart.</p>
-
-          <label for="fullName">Full name</label>
-          <input id="fullName" name="fullName" type="text" autocomplete="name" required>
-
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" autocomplete="email" required>
-
-          <label for="phone">Phone <span class="optional">(optional)</span></label>
-          <input id="phone" name="phone" type="tel" autocomplete="tel">
-
-          <label for="age">Age</label>
-          <input id="age" name="age" type="number" min="1" max="120" inputmode="numeric" required>
-
-          <label for="state">State</label>
-          <select id="state" name="state" required>
-            <option value="">Select your state</option>
-          </select>
-
-          <label class="check">
-            <input id="consent" name="consent" type="checkbox" required>
-            <span>I understand Trimix requires a prescription and a provider review before it can be dispensed.</span>
-          </label>
-
-          <p id="form-error" class="error" role="alert" hidden></p>
-          <button class="btn btn-block" type="submit">Continue to add to cart</button>
-          <p class="fineprint">You will be redirected to balancedlife-care.com to complete checkout.</p>
-        </form>
+        <article class="card form">
+          <p class="eyebrow">Trimix Injection</p>
+          <h2 id="start">Take the next step</h2>
+          <p class="muted">Review product details and available options on Balanced Life Care. A prescription and provider approval are required before medication can be dispensed.</p>
+          <p class="price"><span>Price from</span><br><strong>$279.00</strong></p>
+          <a class="btn btn-block" href="https://balancedlife-care.com/product/trimix-injection/">View Trimix options</a>
+          <p class="fineprint">Your provider will determine whether treatment is appropriate. Product options and pricing may vary.</p>
+        </article>
       </div>
     </section>
 
@@ -170,6 +146,6 @@
     </div>
   </footer>
 
-  <script src="assets/trimix/js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
