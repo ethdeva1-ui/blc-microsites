@@ -184,8 +184,9 @@ h2.center::after { content: ""; display: block; width: 48px; height: 4px; border
 .mini-list li { padding-left: 22px; position: relative; margin-bottom: 4px; }
 .mini-list li::before { content: "✓"; position: absolute; left: 0; color: var(--brand); font-weight: 700; }
 .buy { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: auto; padding-top: 16px; border-top: 1px solid var(--line); }
-.buy .price { margin: 0; font-size: 1.6rem; }
-.buy .btn { white-space: nowrap; }
+.buy .price { flex: 1 1 auto; min-width: 0; margin: 0; font-size: clamp(1.2rem, 2vw, 1.5rem); line-height: 1.25; }
+.buy .price span { display: block; margin: 0 0 5px; font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.buy .btn { flex: 0 0 auto; white-space: nowrap; padding-inline: 18px; }
 
 .steps li { border: 0; box-shadow: 0 8px 24px rgba(15, 127, 118, .08); }
 details { transition: box-shadow .2s; }
@@ -195,4 +196,9 @@ details[open] { box-shadow: 0 8px 24px rgba(15, 127, 118, .1); border-color: var
 @media (max-width: 700px) {
   .section { padding: 60px 0; }
   .product-body h3 { min-height: 0; }
+}
+@media (max-width: 480px) {
+  .buy { align-items: stretch; flex-direction: column; }
+  .buy .price { font-size: 1.4rem; }
+  .buy .btn { width: 100%; text-align: center; }
 }
